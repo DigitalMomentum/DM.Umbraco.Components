@@ -1,0 +1,28 @@
+﻿@using Umbraco.Web
+@using Umbraco.Web.Models
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+
+	int imageId = Model.value.imageId;
+
+	string title = Model.value.title;
+
+	string description = Model.value.description;
+
+	IPublishedContent linkNode = Umbraco.TypedContent((string)Model.value.link.udi); //Udi.Parse("umb://document/aa47467d4ff84d6d8c36e4ef577265a0").TryConvertTo<IPublishedContent>();
+
+}
+
+<a href="@linkNode.Url" target="@Model.value.link.target" title="@Model.value.link.name">
+	<div class="imgButton">
+		<img src="@Umbraco.TypedMedia(imageId).Url" />
+		<div class="content">
+			<div class="title">
+				@title
+			</div>
+			<div class="desc">
+				@description
+			</div>
+		</div>
+	</div>
+</a>

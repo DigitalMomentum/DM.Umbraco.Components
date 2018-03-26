@@ -1,0 +1,64 @@
+﻿.DMImageButton {
+    padding: 10px;
+}
+
+	.DMImageButton > div {
+		margin: 0 auto;
+		max-width: 500px;
+	}
+
+	.DMImageButton input,
+	.DMImageButton textarea {
+		width: 100%;
+	}
+
+	.DMImageButton .option {
+		display: block;
+	}
+
+		.DMImageButton .option > span {
+			font-size: 15px;
+			font-weight: bold;
+		}
+
+		.DMImageButton .option + .option {
+			margin-top: 10px;
+		}
+
+	.DMImageButton .image {
+		position: relative;
+		max-width: 500px;
+	}
+
+	.DMImageButton .remove {
+		color: red;
+	}
+	.DMImageButton .image .remove {
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		color: red;
+		background: white;
+		border-radius: 15px;
+		text-align: center;
+		text-decoration: none;
+		width: 32px;
+		height: 32px;
+		overflow: hidden;
+		font-size: 24px;
+		line-height: 36px;
+		opacity: 0.5;
+		display: none;
+	}
+
+	.DMImageButton .image:hover .remove {
+		display: block;
+	}
+
+
+	.DMImageButton a.usky-editor-placeholder {
+		display: block;
+		border: 1px solid #bbbabf;
+		min-height: 130px;
+		background: #F3F3F5;
+	}

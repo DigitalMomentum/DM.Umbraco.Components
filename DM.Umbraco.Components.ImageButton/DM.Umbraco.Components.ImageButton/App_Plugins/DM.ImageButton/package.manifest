@@ -1,0 +1,30 @@
+﻿{
+ 
+  "gridEditors": [
+			{
+				"name": "Image Button",
+				"alias": "DM.Components.ImageButton",
+				"view": "/App_Plugins/DM.ImageButton/Views/GridEditor.html",
+				"icon": "icon-picture",
+				"render": "/Views/Partials/Grid/Editors/ImageButton.cshtml",
+				"config": {
+					"title": {
+						"mode": "required",
+						"placeholder": "Enter an image title",
+						"placeholder2": "Enter an image title"
+					},
+					"description": {
+						"mode": "optional",
+						"placeholder": "Optional: Enter a small image description",
+						"rows": 2
+					}
+				}
+			}
+  ],
+	"javascript": [
+		"/App_Plugins/DM.ImageButton/Scripts/Directive.js"
+	],
+	"css": [
+		"/App_Plugins/DM.ImageButton/Styles/Default.css"
+	]
+}

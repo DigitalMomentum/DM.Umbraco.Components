@@ -1,0 +1,47 @@
+﻿<div class="DMImageButton">
+
+    <div>
+        <div class="option">
+            <span>Image</span>
+            <div class="image" ng-if="image">
+                <img ng-src="{{imageUrl}}" alt=""/><br/>
+                <a href="#" class="remove" ng-click="removeImage()" prevent-default><i class="icon icon-delete"></i></a>
+            </div>
+            <div class="image" ng-if="!image">
+                <a href="#" class="usky-editor-placeholder" ng-click="selectImage()" prevent-default>
+                    <div style="padding-top: 40px; text-align: center;">
+                        <i class="icon icon-picture" style="font-size: 22px;"></i><br/>
+                        Select image
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <label class="option">
+            <span>Title</span><br/>
+            <input type="text" ng-model="value.title" placeholder="{{cfg.title.placeholder}}" ng-required="cfg.title.required"/>
+        </label>
+
+        <label class="option">
+            <span>Description</span><br/>
+            <textarea type="text" ng-model="value.description" placeholder="{{cfg.description.placeholder}}" rows="{{cfg.description.rows}}" ng-required="cfg.description.required"></textarea>
+        </label>
+
+		<label class="option">
+			<span>Link</span><br />
+			<div class="link" ng-if="value.link">
+				{{value.link.name}}: <i>{{value.link.url}}</i>
+				<a href="#" class="remove" ng-click="removeLink()" prevent-default style="position:relative;display:inline-block;"><i class="icon icon-delete"></i></a>
+			</div>
+			<div class="link" ng-if="!value.link">
+				<a href="#" ng-click="selectLink()" prevent-default>
+						<i class="icon icon-link" ></i>
+						Select Link
+				</a>
+			</div>
+		</label>
+    </div>
+    <umb-overlay ng-if="mediaPickerOverlay.show" model="mediaPickerOverlay" position="right" view="mediaPickerOverlay.view"></umb-overlay>
+
+
+</div>
