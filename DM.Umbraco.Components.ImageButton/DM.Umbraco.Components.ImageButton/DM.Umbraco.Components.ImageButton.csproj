@@ -53,6 +53,7 @@
     <Content Include="App_Plugins\DM.ImageButton\Views\Directive.html" />
     <Content Include="App_Plugins\DM.ImageButton\Views\GridEditor.html" />
     <Content Include="App_Plugins\DM.ImageButton\Views\PropertyEditor.html" />
+    <Content Include="css\ImageButton.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

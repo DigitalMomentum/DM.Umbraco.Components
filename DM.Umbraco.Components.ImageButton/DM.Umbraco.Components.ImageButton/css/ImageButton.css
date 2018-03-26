@@ -1,0 +1,54 @@
+﻿/*
+DigitalMomentum.Umbraco.ImageButton
+
+Below are some examples of the image button component to change the layout.
+
+You Can use the following examples in your own stylesheet
+
+*/
+
+.imgButton {
+	position: relative;
+	position: absolute;
+}
+
+
+/* OPTION 1: Display the text along the bottom of the image*/
+.imgButton .content {
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	color: white;
+	text-align: left;
+}
+
+/* OPTION 2: Display the text at the top of the image*/
+/*
+.imgButton .content {
+	 position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	text-align: center;
+}
+*/
+
+
+/* OPTION 3: Display the text in the middle of the image*/
+/*
+.imgButton .content {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 5px 10px;
+
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	text-align: center;
+	width: 80%;
+}
+*/
