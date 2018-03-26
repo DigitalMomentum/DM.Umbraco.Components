@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DM.Components.ImageButton</RootNamespace>
-    <AssemblyName>DM.Umbraco.ImageButton</AssemblyName>
+    <AssemblyName>DigitalMomentum.Umbraco.ImageButton</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

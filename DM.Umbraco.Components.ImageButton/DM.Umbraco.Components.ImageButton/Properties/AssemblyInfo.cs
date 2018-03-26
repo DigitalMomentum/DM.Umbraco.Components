@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DM.Umbraco.Components.ImageButton")]
+[assembly: AssemblyTitle("DigitalMomentum.Umbraco.ImageButton")]
 [assembly: AssemblyDescription("An Umbraco Datatype/Grid Editor to add an image with text overlay + link to node/media")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Digital Momentum")]
