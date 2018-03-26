@@ -9,7 +9,7 @@
 				"render": "/Views/Partials/Grid/Editors/ImageButton.cshtml",
 				"config": {
 					"title": {
-						"mode": "required",
+						"mode": "optional", //Optional Or Required
 						"placeholder": "Enter an image title",
 						"placeholder2": "Enter an image title"
 					},
