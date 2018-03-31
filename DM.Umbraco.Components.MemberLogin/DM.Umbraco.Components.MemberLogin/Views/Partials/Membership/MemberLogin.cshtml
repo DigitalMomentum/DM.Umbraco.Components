@@ -1,0 +1,19 @@
+﻿@*@inherits Umbraco.Web.Macros.PartialViewMacroPage*@
+@using DM.BusinessLogic.Controllers.Members;
+@model DM.BusinessLogic.Models.Members.LoginModel
+
+@if (User.Identity.IsAuthenticated) {
+	<p>
+		Welcome, @User.Identity.Name
+	</p>
+	<p>
+		@Html.ActionLink("Log out", "Logout", "Membership")
+	</p>
+} else {
+	using (Html.BeginUmbracoForm<MembershipController>("MemberLogin")) {
+		@Html.EditorFor(x => Model)
+		<input type="submit" />
+	}
+
+	<p>@TempData["Status"]</p>
+}
