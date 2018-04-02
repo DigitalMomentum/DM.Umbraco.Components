@@ -209,6 +209,7 @@
     <Compile Include="Migrations\MigrationEvents.cs" />
     <Compile Include="Migrations\Version_1_1_0.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\MemberStatusModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -222,6 +223,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Partials\MemberLogin\MemberLogin.cshtml" />
+    <Content Include="Views\Partials\MemberLogin\MemberStatus.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />

@@ -14,7 +14,9 @@ namespace DM.MemberLogin.Controllers {
 		public ActionResult Logout() {
 			Session.Clear();
 			FormsAuthentication.SignOut();
-			return Redirect("/home");
+			//return Redirect("/");
+			Response.Redirect(Request.UrlReferrer.AbsoluteUri);
+			return null;// RedirectToCurrentUmbracoUrl(); //Redirect to current page. If we need to be authenticated, let Umbraco work out where we are ment to go.
 		}
 
 		[HttpPost]
@@ -26,7 +28,9 @@ namespace DM.MemberLogin.Controllers {
 			}
 
 			TempData["Status"] = "Invalid Log-in Credentials";
-			return RedirectToCurrentUmbracoPage();
+
+			return RedirectToCurrentUmbracoUrl();
+			//return RedirectToCurrentUmbracoPage();
 		}
 	}
 }
