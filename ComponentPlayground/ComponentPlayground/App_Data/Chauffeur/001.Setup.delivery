@@ -1,0 +1,3 @@
+﻿create-database
+install y
+user change-password admin password99
