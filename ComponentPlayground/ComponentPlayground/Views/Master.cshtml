@@ -49,6 +49,10 @@
 
         <nav class="nav-bar top-nav">
             @Html.Partial("~/Views/Partials/Navigation/TopNavigation.cshtml")
+
+			@Html.Partial("MemberLogin/MemberStatus", new DM.MemberLogin.Models.MemberStatusModel() { 
+				LoginUrl = "/Login"
+			})
         </nav>
 
         <div class="mobile-nav-handler">

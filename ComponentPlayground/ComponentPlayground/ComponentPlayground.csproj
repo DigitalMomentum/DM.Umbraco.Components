@@ -73,9 +73,6 @@
     <Reference Include="controls, Version=1.0.6659.16877, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Core.7.10.0\lib\net45\controls.dll</HintPath>
     </Reference>
-    <Reference Include="DigitalMomentum.Umbraco.MemberLogin, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DigitalMomentum.Umbraco.MemberLogin.0.1.0\lib\net461\DigitalMomentum.Umbraco.MemberLogin.dll</HintPath>
-    </Reference>
     <Reference Include="Examine, Version=0.1.89.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Examine.0.1.89\lib\net45\Examine.dll</HintPath>
     </Reference>
@@ -302,12 +299,13 @@
     <Content Include="config\BackOfficeTours\getting-started.json" />
     <Content Include="config\applications.config" />
     <Content Include="config\404handlers.config" />
-    <Content Include="config\uSyncCore.Config" />
+    <Content Include="config\uSyncCore.Config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="config\uSyncBackOffice.Config" />
     <Content Include="App_Plugins\uSync\package.manifest" />
     <Content Include="App_Plugins\uSync.Content\package.manifest" />
     <None Include="packages.config" />
-    <Content Include="Nuget\Readme.txt" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
     <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
@@ -321,8 +319,9 @@
     <Content Include="Views\Partials\Grid\Bootstrap2-Fluid.cshtml" />
     <Content Include="Views\MacroPartials\FeaturedProducts.cshtml" />
     <Content Include="Views\MacroPartials\LatestBlogposts.cshtml" />
+    <Content Include="Views\Master.cshtml" />
     <Content Include="Views\Partials\MemberLogin\MemberLogin.cshtml" />
-    <Content Include="Views\MacroPartials\MemberLogin\Member Login.cshtml" />
+    <Content Include="Views\Partials\MemberLogin\MemberStatus.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -368,7 +367,12 @@
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\DM.Umbraco.Components.MemberLogin\DM.Umbraco.Components.MemberLogin\DM.Umbraco.Components.MemberLogin.csproj">
+      <Project>{1323a3fc-7d67-4f4b-93ac-f30ab1b51a69}</Project>
+      <Name>DM.Umbraco.Components.MemberLogin</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -408,6 +412,9 @@
   <Import Project="..\packages\UmbracoCms.7.10.0\build\UmbracoCms.targets" Condition="Exists('..\packages\UmbracoCms.7.10.0\build\UmbracoCms.targets')" />
   <Import Project="..\packages\uSync.4.0.4\build\uSync.targets" Condition="Exists('..\packages\uSync.4.0.4\build\uSync.targets')" />
   <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY /E /Y "$(SolutionDir)\..\DM.Umbraco.Components.MemberLogin\DM.Umbraco.Components.MemberLogin\Views" "$(ProjectDir)\Views\"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
