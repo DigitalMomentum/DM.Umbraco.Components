@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DM.Umbraco.Components.MemberLogin", "DM.Umbraco.Components.MemberLogin\DM.Umbraco.Components.MemberLogin.csproj", "{1323A3FC-7D67-4F4B-93AC-F30AB1B51A69}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{533585AA-FC71-48F9-9FD9-BDEEAEB3E5D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

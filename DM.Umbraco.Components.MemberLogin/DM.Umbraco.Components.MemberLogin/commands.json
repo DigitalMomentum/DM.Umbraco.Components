@@ -1,0 +1,14 @@
+{
+  "commands": {
+    "CreateLocalNuPkg": {
+      "fileName": "powershell.exe",
+      "workingDirectory": ".",
+      "arguments": "-ExecutionPolicy Bypass -NonInteractive -File Nuget\\CreateLocalNuPkg.ps1"
+    },
+    "CreateNuPkg": {
+      "fileName": "powershell.exe",
+      "workingDirectory": ".",
+      "arguments": "-ExecutionPolicy Bypass -NonInteractive -File Nuget\\CreateNuPkg.ps1"
+    }
+  }
+}
